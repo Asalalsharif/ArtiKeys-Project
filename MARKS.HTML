@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculate Marks</title>
+
+    <style>
+        body {
+            background-color: lightgrey;
+            margin: center;
+            padding: 50px;
+        }
+
+        form {
+            padding: 50px;
+            margin-bottom: 50px;
+            border: solid 4px darkblue;
+            background-color: lightskyblue;
+            position: relative;
+            width: 500px;
+        }
+
+        #home {
+            margin-top: 100px;
+        }
+    </style>
+
+    <SCRIPT>
+        var a;//Global variable
+        var b;
+        var c;
+        var result = 0; //Global variable
+        var avg = 0; //Global variable
+
+        function Calculate() {
+            a = parseInt(form1.mark1.value);
+            b = parseInt(form1.mark2.value);
+            c = parseInt(form1.mark3.value);
+
+            result = a + b + c;
+            avg = result / 3;
+
+
+
+            document.write("The Total is  :" + "<b>" + result + "<b>" + "</br>");
+
+            document.write("The Avg is  :" + "<b>" + avg + "<b>" + "</br>");
+
+            if (avg > 50) {
+                document.write("The Grade is  :" + "<b>" + "Pass" + "<b>");
+
+            }
+            else {
+                document.write("The Grade is  :" + "<b>" + "Fail" + "<b>");
+            }
+        }
+
+    </SCRIPT>
+
+
+
+</head>
+
+<body>
+
+    <img src="./RPA ds-20220907T131614Z-001/RPA ds/ArtikeysLogo-01.png" id="pic" width="200pc" height="50px">
+    <h5> Caculate Student's Marks :</h5>
+    <FORM name="form1">
+
+        <h4> Insert student's marks here !</h4>
+
+        <b>Enter Marks 1:</b><INPUT type="textbox" id="mark1" name="mark1"> </br><br>
+        <b>Enter Marks 2:</b><INPUT type="textbox" id="Mark2" name="mark2"> </br><br>
+        <b>Enter Marks 3:</b><INPUT type="textbox" id="Mark3" name="mark3"> </br><br>
+
+        <br><br>
+
+        <INPUT type="button" Value="Calculate" onClick='Calculate()'>
+        <br><br>
+
+    </FORM>
+
+
+
+
+    <a href="./home.html"><button id="home"> Back to home page </button> </a>
+
+</body>
+
+
+</html>

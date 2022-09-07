@@ -1,0 +1,39 @@
+body {
+    background-color: lightgrey;
+    margin: center;
+    padding: 50px;
+}
+
+form {
+    padding: 50px;
+    margin-bottom: 50px;
+    border: solid 4px darkblue;
+    background-color: lightskyblue;
+    position: relative;
+    width: 700px;
+
+}
+
+.one {
+    position: absolute;
+    left: 50px;
+}
+
+.one1 {
+    position: absolute;
+    left: 200px;
+    width: 220px;
+
+}
+
+.two {
+    position: absolute;
+    left: 450px;
+}
+
+.two2 {
+    position: absolute;
+    left: 510px;
+    width: 220px;
+
+}

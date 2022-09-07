@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add new student</title>
+
+    <link rel="stylesheet" href="./form.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+
+    <script>
+        function SubForm() {
+
+            $.ajax({
+                url: 'https://api.apispreadsheets.com/data/SCT9E2kG4PgfCHY4/',
+                type: 'post',
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    alert("Form Data Submitted :)")
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+
+        }
+
+        function openLink() {
+            window.location.href = 'https://docs.google.com/spreadsheets/d/1Fjqc-q3wubRrVIGDnFlKLZONvv6RMV1FvLZ_pw6ZvLo/edit#gid=0';
+        }
+
+        function playSound(url) {
+            const audio = new Audio(url);
+            audio.play();
+        }
+    </script>
+
+
+</head>
+
+
+<body>
+
+    <img src="./RPA ds-20220907T131614Z-001/RPA ds/ArtikeysLogo-01.png" id="pic" width="200pc" height="50px">
+
+    <br><br>
+    <h4> Insert new student's information here !</h4>
+
+
+    <form id="myForm">
+
+        <label class="one" for="fullname"> Student's full name : </label>
+        <input class="one1" type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+
+
+        <label class="two" for="gender">Gender:</label>
+        <select class="two2" id="gender" name="gender" size="1">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br><br>
+
+        <label class="one" for="birthday">Birthday:</label>
+        <input class="one1" type="date" id="birthday" name="birthday" placeholder="MM/DD/YYYY">
+
+
+        <label class="two" for="email">Email:</label>
+        <input class="two2" type="email" id="email" name="email" placeholder="abc@artikeys.com">
+        <br><br>
+
+        <label class="one" for="phone">Phone number:</label>
+        <input class="one1" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            placeholder="0712345678">
+
+
+        <label class="two" for="City">City:</label>
+        <select class="two2" id="City" name="City" size="1">
+            <option value="Amman">Amman</option>
+            <option value="Zarqaa">Zarqaa</option>
+            <option value="Aqaba">Aqaba</option>
+            <option value="Irbid">Irbid</option>
+        </select>
+        <br> <br>
+
+        <h4> Insert student's marks here !</h4>
+        <div class="MM">
+            <label>Mark1:</label>
+            <input type="number" id="mark1" name="mark1">
+            <br><br>
+
+            <label>Mark2:</label>
+            <input type="number" id="mark2" name="mark2">
+            <br><br>
+
+            <label>Mark3:</label>
+            <input type="number" id="mark3" name="mark3">
+            <br><br>
+        </div>
+
+    </form>
+
+    <button onclick="SubForm() ; playSound('https://www.fesliyanstudios.com/play-mp3/387')">Submit</button>
+    <br><br>
+
+    <button onclick="openLink()"> Open & Edit File
+    </button> <br><br>
+
+    <a href="./home.html"><button> Back to home page </button> </a>
+
+
+</body>
+
+</html>
